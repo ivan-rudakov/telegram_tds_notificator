@@ -1,3 +1,3 @@
 pyiArduinoI2Ctds
-adafruit_dht
-board
+Adafruit_DHT
+#board
