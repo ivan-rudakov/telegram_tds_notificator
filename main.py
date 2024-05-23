@@ -1,6 +1,6 @@
 import time
 import board
-import Adafruit_DHT
+import adafruit_dht
 from pyiArduinoI2Ctds import *
 import sys
 
@@ -26,12 +26,11 @@ def _tds_start():
 
 #start connections
 # DHT
-sensor = Adafruit_DHT.DHT11
+dhtDevice = adafruit_dht.DHT11(board.D4)
 pin = '4'
 
 # TDS
 tds = _tds_start()
-
 
 #local variables
 temperature_array = []
@@ -48,8 +47,7 @@ def find_average(nums):
 
 def measure_temperature(sensor):
     try:
-        humidity,value = Adafruit_DHT.read_retry(sensor, pin)
-        #value = dht.temperature
+        value = dhtDevice.temperature
         print("measured")
     except:
         value = 20
@@ -60,12 +58,15 @@ def measure_temperature(sensor):
     return sum(temperature_array) / count
 
 def main():
-    if not sensor:
+    if not dhtDevice:
+        print("dht not found")
         return
     while True:
         temperature = measure_temperature(sensor)
         print(temperature)
         time.sleep(1)
+
+main()
 
 #def main():
 #    check = _start()
