@@ -1,3 +1,2 @@
 pyiArduinoI2Ctds
 Adafruit_DHT
-#board
