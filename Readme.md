@@ -1,5 +1,9 @@
 **Измерение температуры, влажности, TDS и EC**
 
+![Stars](https://img.shields.io/github/stars/ivan-rudakov/telegram_tds_notificator?style=flat-square)
+![Forks](https://img.shields.io/github/forks/ivan-rudakov/telegram_tds_notificator?style=flat-square)
+![Watchers](https://img.shields.io/github/watchers/ivan-rudakov/telegram_tds_notificator?style=flat-square)
+
 Описание проекта:
 
 Этот проект предназначен для измерения температуры, влажности, уровня TDS (общего содержания растворенных твердых веществ) и электрической проводимости (EC) с использованием датчиков DHT11 и TDS. Программа собирает данные с помощью этих датчиков, сохраняет их в очередях фиксированного размера и выводит усредненные значения измерений.
